@@ -1,0 +1,12 @@
+/*css part of the prismatic night theme. visit https://github.com/dbuxy218/Prismatic-Night*/
+/*MANDATORY*/
+@import url("patches/tabs-custom.css");
+@import url("patches/nav-bar-custom.css");
+@import url("patches/tabs-below-nav-bar.css");
+@import url("patches/transition-color.css");
+/*OPTIONAL*/
+/*@import url("patches/tabs-below-content.css");*/
+
+/*USE ANY ONE at once*/
+@import url("patches/ctrl+l-access.css");
+/*@import url("patches/hover-access.css");*/
