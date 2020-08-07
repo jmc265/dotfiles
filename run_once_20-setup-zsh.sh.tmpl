@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Install ZSH
+{{ if eq .chezmoi.os "linux" -}}
+sudo apt install -y zsh
+{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+brew install zsh
+brew install zsh-completions
+{{ end -}}
+
+chsh -s $(which zsh)
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts
+./install.sh
+cd ..
+rm -rf fonts/
+
+# Install Powerlevel10k theme
+version="801bfbb2946b10527e75e77838a3657d78cb92e5"
+destdir="${HOME}/.oh-my-zsh/custom/themes/powerlevel10k"
+rm -rf ${destdir}
+mkdir -p ${destdir}
+curl -s -L https://github.com/romkatv/powerlevel10k/archive/${version}.tar.gz | tar -C ${destdir} --strip-components=1 -xzf -

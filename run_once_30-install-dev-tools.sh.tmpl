@@ -1,0 +1,74 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.os "linux" -}}
+sudo apt install -y git
+{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Git
+brew install git
+
+# Docker
+brew cask install docker
+
+# Terminal
+brew cask install iterm2
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+# Install yarn
+brew install yarn
+
+# VSCode insiders
+brew cask install visual-studio-code-insiders
+
+code-insiders --install-extension alefragnani.project-manager
+code-insiders --install-extension christian-kohler.npm-intellisense
+code-insiders --install-extension eamodio.gitlens
+code-insiders --install-extension eg2.vscode-npm-script
+code-insiders --install-extension Equinusocio.vsc-material-theme
+code-insiders --install-extension equinusocio.vsc-material-theme-icons
+code-insiders --install-extension hashicorp.terraform
+code-insiders --install-extension liximomo.sftp
+code-insiders --install-extension mechatroner.rainbow-csv
+code-insiders --install-extension ms-azure-devops.azure-pipelines
+code-insiders --install-extension ms-azuretools.vscode-azureappservice
+code-insiders --install-extension ms-azuretools.vscode-azurefunctions
+code-insiders --install-extension ms-azuretools.vscode-docker
+code-insiders --install-extension ms-dotnettools.csharp
+code-insiders --install-extension ms-python.python
+code-insiders --install-extension ms-vscode.azure-account
+code-insiders --install-extension ms-vscode.powershell-preview
+code-insiders --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code-insiders --install-extension ms-vsliveshare.vsliveshare
+code-insiders --install-extension Pivotal.vscode-spring-boot
+code-insiders --install-extension rafamel.subtle-brackets
+code-insiders --install-extension redhat.java
+code-insiders --install-extension redhat.vscode-yaml
+code-insiders --install-extension robinbentley.sass-indented
+code-insiders --install-extension streetsidesoftware.code-spell-checker
+code-insiders --install-extension VisualStudioExptTeam.vscodeintellicode
+code-insiders --install-extension vscjava.vscode-java-debug
+code-insiders --install-extension vscjava.vscode-java-dependency
+code-insiders --install-extension vscjava.vscode-java-pack
+code-insiders --install-extension vscjava.vscode-java-test
+code-insiders --install-extension vscjava.vscode-maven
+
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults delete -g ApplePressAndHoldEnabled || true
+
+# Install Firefox
+brew cask install firefox-developer-edition
+
+# Install insomnia
+brew cask install insomnia
+
+# Install Clipy
+brew cask install clipy
+
+# Install Fira Code font
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code-nerd-font
+brew cask install font-hack-nerd-font
+{{ end -}}

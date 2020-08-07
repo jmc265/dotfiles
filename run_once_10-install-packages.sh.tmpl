@@ -1,0 +1,13 @@
+#!/bin/sh
+
+{{ if eq .chezmoi.os "linux" -}}
+sudo apt install -y \
+	curl
+{{ end -}}
+
+{{ if eq .chezmoi.os "darwin" -}}
+# Install Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+{{ end -}}

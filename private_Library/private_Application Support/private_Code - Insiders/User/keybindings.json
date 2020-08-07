@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "shift+cmd+s",
@@ -43,9 +42,6 @@
         "command": "workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
     },
-    /**
-    * Activity Bar
-    **/
     {
         "key": "cmd+k cmd+e",
         "command": "workbench.view.explorer"
@@ -80,9 +76,6 @@
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "!terminalFocus"
     },
-    /**
-    * File Explorer
-    **/
     {
         "key": "cmd+n",
         "command": "explorer.newFile",
