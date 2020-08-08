@@ -1,6 +1,6 @@
 ```
 curl -sfL https://git.io/chezmoi | sh
-chezmoi init --apply https://github.com/jmc265/dotfiles.git
+chezmoi init --apply git@github.com:jmc265/dotfiles.git
 ```
 
 Inspiration:
