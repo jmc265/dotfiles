@@ -60,8 +60,8 @@ defaults write com.apple.screensaver askForPasswordDelay -int 5
 # Screen Saver: Flurry
 defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
 
-# Hot corners -> bottom left -> start screen saver
-defaults write com.apple.dock "wvous-bl-corner" -int 5
+# Hot corners -> bottom left -> lock screen
+defaults write com.apple.dock "wvous-bl-corner" -int 13
 defaults write com.apple.dock "wvous-bl-modifier" -int 0
 
 defaults write com.apple.dock autohide -bool true
