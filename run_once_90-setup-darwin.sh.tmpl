@@ -1,9 +1,46 @@
 #!/bin/sh
 
 {{ if eq .chezmoi.os "darwin" -}}
+/usr/sbin/systemsetup -settimezone "Europe/London"
+/usr/sbin/systemsetup -setnetworktimeserver "time.euro.apple.com"
+/usr/sbin/systemsetup -setusingnetworktime on
+
+# Display -> Automatically adjust brightness
+defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Display Enabled" -bool true
+
+# Keyboard -> Adjust keyboard brightness in low light
+defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool true
+defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Keyboard Dim Time" -int 300
+
+# Show shut down etc. buttons
+defaults write /Library/Preferences/com.apple.loginwindow PowerOffDisabled -bool false
+
+# Don't show any password hints
+defaults write /Library/Preferences/com.apple.loginwindow RetriesUntilHint -int 0
+
+# Allow fast user switching
+defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool true
+
+# ==============================================
+# Set keyboard preferences
+# ==============================================
+defaults write com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID "com.apple.keylayout.British-PC"
+defaults write com.apple.HIToolbox AppleDefaultAsciiInputSource -dict InputSourceKind "Keyboard Layout" "KeyboardLayout ID" -int 17 "KeyboardLayout Name" British-PC
+
+# Delete the default layouts (US)
+defaults delete com.apple.HIToolbox AppleEnabledInputSources
+
+# Enable British-PC layout
+defaults write com.apple.HIToolbox AppleEnabledInputSources -array '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 17; "KeyboardLayout Name" = British-PC; }'
+defaults write com.apple.HIToolbox AppleInputSourceHistory -array '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 17; "KeyboardLayout Name" = British-PC; }'
+defaults write com.apple.HIToolbox AppleSelectedInputSources -array '{ InputSourceKind = "Keyboard Layout"; "KeyboardLayout ID" = 17; "KeyboardLayout Name" = British-PC; }'
+
 defaults write -g AppleInterfaceStyle Dark
 defaults write -g AppleLanguages -array en-GB
 defaults write -g AppleLocale en_GB
+defaults write -g AppleMeasurementUnits -string "Centimeters"
+defaults write -g AppleMetricUnits -bool true
+defaults write -g ApplePressAndHoldEnabled -bool FALSE
 defaults write -g InitialKeyRepeat -int 15
 defaults write -g KeyRepeat -int 2
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
@@ -13,9 +50,24 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write -g NSLinguisticDataAssetsRequested -array en en_US
 defaults write -g NSUserDictionaryReplacementItems -bool false
 defaults write -g WebAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g com.apple.swipescrolldirection -bool false
+defaults write -g NSQuitAlwaysKeepsWindows -bool false
+
+# Ask for password after 5 seconds
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 5
+
+# Screen Saver: Flurry
+defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Flurry" path -string "/System/Library/Screen Savers/Flurry.saver" type -int 0
+
+# Hot corners -> bottom left -> start screen saver
+defaults write com.apple.dock "wvous-bl-corner" -int 5
+defaults write com.apple.dock "wvous-bl-modifier" -int 0
 
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock orientation left
 defaults write com.apple.dock launchanim -bool false
 killall Dock
+
+chflags nohidden "${HOME}/Library"
 {{ end -}}
