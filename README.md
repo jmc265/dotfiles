@@ -11,8 +11,8 @@ chezmoi init --apply https://github.com/jmc265/dotfiles.git
 * Firefox --> about:config --> toolkit.legacyUserProfileCustomizations.stylesheets to true
 * Firefox --> about:profiles --> Profile Folder --> `ln -s ~/.local/share/chezmoi/software/firefox/profiles/chrome <PROFILE-FOLDER>`
 * Change Background image to /Users/user/Pictures/background.png
-* (Install Fork)[https://git-fork.com/]
-
+* [Install Fork](https://git-fork.com/)
+* [Instal Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 Inspiration:
  * https://github.com/twpayne/dotfiles
