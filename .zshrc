@@ -5,6 +5,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions docker-compose docker npm yarn sudo terraform vscode)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zshrc_secrets
 
 # History settings - http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 export HISTSIZE=2000000
