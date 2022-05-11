@@ -18,6 +18,9 @@ sudo apt install -y zsh
 chsh -s $(which zsh)
 ./install-zsh-plugins.sh
 
+# Install other pacakges
+sudo apt-get install neofetch
+
 # Install docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --batch --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
 

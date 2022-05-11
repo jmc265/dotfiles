@@ -7,11 +7,14 @@ brew tap homebrew/cask-versions
 
 brew install git
 
-# Instal ZSH
+# Install ZSH
 brew install zsh
 brew install zsh-completions
 chsh -s $(which zsh)
 ./install-zsh-plugins.sh
+
+# Install neofetch
+brew install neofetch
 
 # Docker
 brew cask install docker

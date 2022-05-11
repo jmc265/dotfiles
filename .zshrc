@@ -84,3 +84,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # Provide Node completions.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+neofetch
