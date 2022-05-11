@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions docker-compose docker npm yarn sudo terraform vscode)
+plugins=(git zsh-autosuggestions docker-compose docker npm yarn sudo terraform vscode web-search history)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc_secrets
