@@ -67,16 +67,6 @@
         "command": "workbench.action.toggleSidebarVisibility",
     },
     {
-        "key": "cmd+k cmd+t",
-        "command": "workbench.action.closePanel",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "cmd+k cmd+t",
-        "command": "workbench.action.toggleMaximizedPanel",
-        "when": "!terminalFocus"
-    },
-    {
         "key": "cmd+n",
         "command": "explorer.newFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
@@ -108,5 +98,13 @@
         "key": "shift+cmd+p",
         "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "cmd+k cmd+t",
+        "command": "-workbench.action.selectTheme"
+    },
+    {
+        "key": "cmd+k cmd+t",
+        "command": "workbench.action.createTerminalEditor"
     },
 ]
