@@ -16,14 +16,20 @@ chsh -s $(which zsh)
 # Install neofetch
 brew install neofetch
 
+# Install tfenv
+brew install tfenv
+tfenv install latest
+
+# Install NVM (node)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install node
+nvm use node
+
 # Docker
 brew cask install docker
 
 # Terminal
 brew cask install iterm2
-
-# Install NVM (node)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
 # Install yarn
 brew install yarn
