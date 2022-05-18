@@ -63,7 +63,7 @@ alias g="git"
 alias history='fc -i -l 1'
 
 export LANG=en_GB.UTF-8
-export EDITOR='code-insiders --wait'
+# export EDITOR='code-insiders --wait'
 export PATH=${HOME}/bin:$PATH
 
 # Remove username and host from prompt
@@ -85,4 +85,6 @@ export NVM_DIR="$HOME/.nvm"
 # Provide Node completions.
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-neofetch
+# Print some motd bits
+clear
+neofetch --disable packages
