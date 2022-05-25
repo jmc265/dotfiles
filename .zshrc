@@ -63,7 +63,9 @@ alias g="git"
 alias history='fc -i -l 1'
 
 export LANG=en_GB.UTF-8
-# export EDITOR='code-insiders --wait'
+export LC_CTYPE=en_GB.UTF-8
+export LC_ALL=en_GB.UTF-8
+export EDITOR='code-insiders --wait'
 export PATH=${HOME}/bin:$PATH
 
 # Remove username and host from prompt
