@@ -60,6 +60,7 @@ alias dk='docker'
 alias dco='docker-compose'
 alias tf='terraform'
 alias g="git"
+alias gac='f() { git add -A; git commit -m "$1" };f'
 alias history='fc -i -l 1'
 
 export LANG=en_GB.UTF-8
@@ -90,3 +91,5 @@ export NVM_DIR="$HOME/.nvm"
 # Print some motd bits
 clear
 neofetch --disable packages
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+export GPG_TTY=$(tty)
