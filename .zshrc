@@ -5,7 +5,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions docker-compose docker npm yarn sudo terraform vscode web-search history)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zshrc_secrets
+
+if [[ -s "$HOME/.zshrc_secrets" ]]; then
+	source $HOME/.zshrc_secrets
+fi
 
 # History settings - http://zsh.sourceforge.net/Guide/zshguide02.html#l17
 export HISTSIZE=2000000
@@ -59,9 +62,21 @@ alias ...='cd ../../'
 alias dk='docker'
 alias dco='docker-compose'
 alias tf='terraform'
-alias g="git"
-alias gac='f() { git add -A; git commit -m "$1" };f'
 alias history='fc -i -l 1'
+alias ra='source ~/.zshrc'
+alias zshrc='nano ~/.zshrc'
+
+# Git commands
+alias ga='git add -A'
+alias gc='git commit'
+alias gac='git add -A && git commit -m '
+alias gl='git log'
+alias gb='git branch'
+alias gch='git checkout'
+alias gm='git merge '
+alias gs='git status'
+alias gp='git push -u'
+
 
 export LANG=en_GB.UTF-8
 export LC_CTYPE=en_GB.UTF-8
@@ -93,3 +108,8 @@ clear
 neofetch --disable packages
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 export GPG_TTY=$(tty)
+
+# pnpm
+export PNPM_HOME="/Users/d0056877_james_cross/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

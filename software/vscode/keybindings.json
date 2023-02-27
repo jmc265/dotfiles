@@ -106,5 +106,5 @@
     {
         "key": "cmd+k cmd+t",
         "command": "workbench.action.createTerminalEditor"
-    },
+    }
 ]

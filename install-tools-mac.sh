@@ -135,10 +135,10 @@ defaults write -g KeyRepeat -int 2
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool true
 defaults write -g NSLinguisticDataAssetsRequested -array en en_US
 defaults write -g NSUserDictionaryReplacementItems -bool false
-defaults write -g WebAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g WebAutomaticSpellingCorrectionEnabled -bool true
 defaults write -g com.apple.swipescrolldirection -bool false
 defaults write -g NSQuitAlwaysKeepsWindows -bool false
 
