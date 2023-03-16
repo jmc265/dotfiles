@@ -42,11 +42,10 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.iconTheme": "eq-material-theme-icons-palenight",
     "projectManager.git.baseFolders": [
-        "/Users/james/Documents/workspace"
+        "/Users/d0056877_james_cross/workspace"
     ],
-    "python.languageServer": "Microsoft",
+    "python.languageServer": "Default",
     "editor.renderWhitespace": "none",
-    "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.overviewRulerBorder": false,
     "editor.hideCursorInOverviewRuler": true,
@@ -99,5 +98,13 @@
     "git.ignoreRebaseWarning": true,
     "editor.inlayHints.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.multiCursorModifier": "ctrlCmd"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.guides.indentation": false,
+    "yaml.schemas": {
+        "file:///Users/d0056877_james_cross/.vscode-insiders/extensions/atlassian.atlascode-3.0.2/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    }
 }
