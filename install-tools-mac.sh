@@ -51,7 +51,6 @@ code-insiders --install-extension GabrielBB.vscode-lombok
 code-insiders --install-extension GraphQL.vscode-graphql
 code-insiders --install-extension hashicorp.terraform
 code-insiders --install-extension jebbs.plantuml
-code-insiders --install-extension liximomo.sftp
 code-insiders --install-extension mathiasfrohlich.Kotlin
 code-insiders --install-extension mechatroner.rainbow-csv
 code-insiders --install-extension ms-azure-devops.azure-pipelines
@@ -66,7 +65,6 @@ code-insiders --install-extension ms-toolsai.jupyter
 code-insiders --install-extension ms-vscode-remote.remote-containers
 code-insiders --install-extension ms-vscode.azure-account
 code-insiders --install-extension ms-vscode.powershell-preview
-code-insiders --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code-insiders --install-extension ms-vsliveshare.vsliveshare
 code-insiders --install-extension octref.vetur
 code-insiders --install-extension Pivotal.vscode-spring-boot
