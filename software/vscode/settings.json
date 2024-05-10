@@ -41,7 +41,7 @@
   "azureFunctions.showProjectWarning": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
-  "projectManager.git.baseFolders": ["/Users/d0056877_james_cross/workspace"],
+  "projectManager.git.baseFolders": ["/Users/James.Cross/workspace"],
   "python.languageServer": "Default",
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
@@ -49,7 +49,7 @@
   "editor.hideCursorInOverviewRuler": true,
   "editor.folding": false,
   "editor.occurrencesHighlight": false,
-  "editor.matchBrackets": "never",
+  "editor.matchBrackets": false,
   "editor.glyphMargin": false,
   "explorer.openEditors.visible": 0,
   "workbench.editor.showIcons": false,
@@ -72,6 +72,8 @@
   "cSpell.userWords": [
     "authorised",
     "Autowired",
+    "centralised",
+    "colour",
     "DATETIME",
     "Deserialise",
     "Dinero",
@@ -82,10 +84,12 @@
     "keycloak",
     "Microservice",
     "Millis",
+    "Minimising",
     "Offsale",
     "preauthorize",
     "SEPA",
     "Servlet",
+    "Sizegrid",
     "skus",
     "Unauthorised",
     "UNPROCESSABLE",
@@ -102,11 +106,17 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.guides.indentation": false,
   "yaml.schemas": {
-    "file:///Users/d0056877_james_cross/.vscode-insiders/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-},
+    "file:///Users/James.Cross/.vscode-insiders/extensions/atlassian.atlascode-3.0.3/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
   "redhat.telemetry.enabled": false,
   "[python]": {
     "editor.formatOnType": true
   },
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "iterm.app",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }

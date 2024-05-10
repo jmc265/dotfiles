@@ -4,6 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions docker-compose docker npm yarn sudo terraform vscode web-search history)
 
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 if [[ -s "$HOME/.zshrc_secrets" ]]; then
@@ -75,7 +76,7 @@ alias gb='git branch'
 alias gch='git checkout'
 alias gm='git merge '
 alias gs='git status'
-alias gp='git push -u'
+alias gp='git push -u --no-verify '
 
 
 export LANG=en_GB.UTF-8
@@ -104,6 +105,11 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 export GPG_TTY=$(tty)
 
 # pnpm
-export PNPM_HOME="/Users/d0056877_james_cross/Library/pnpm"
+export PNPM_HOME="/Users/James.Cross/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/usr/local/sbin:$PATH"
